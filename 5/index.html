@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <title> lesson [3]: calling JS code </title>
+    <link rel="stylesheet" href="" type="text/css">
+    <script src="main.js" type="text/javascript">
+        /*
+            [1] JS code before HTML  = syntax error in console
+
+            [2] two ways for calling JS code:
+                [a] calling JS external sheet  =>> in head  =>> first thing executed when loading webpage  =>> not best practice
+                [b] calling JS external sheet  =>> last thing in body
+        */
+        document.write("<h1> The Main Story </h1>");
+        document.querySelector("h1").style.color="blue";
+        document.querySelector("h1").style.fontSize="40px";
+    </script>
+    <style></style>
+</head>
+
+<body>
+    <h1> Page Title </h1>
+    <h2> Tell A Story </h2>
+    <h3> chapter one </h3>
+
+    <script>
+        document.querySelector("h2").style.color="blue";
+        /* calling JS external sheet  =>> last thing in body */
+    </script>
+</body>
+</html>

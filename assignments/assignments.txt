@@ -1,0 +1,123 @@
+=>> assignments [86:93]  [DOM]
+
+[1] assignment_1  []
+[2] assignment_2  [D]
+[3] assignment_3  [D]	=>> secret =>> [onchange] [oninput] events
+[4] assignment_4  [D]
+[5] assignment_5  [D]
+[6] assignment_6  [D]	=>> little hard
+
+
+
+
+=>> assignments [94:101] [DOM]
+
+[1] assignment_1  [D]
+[2] assignment_2  [D]	=>> program [add classes and show] & [remove classes]
+[3] assignment_3  [D]
+[4] assignment_4  [D]
+[5] assignment_5  [D]	=>> console.log(document.querySelector("div").tagName);	=>> [result = div] 
+										=>> html element tagName
+
+
+
+
+=>> assignments [102:110]  [BOM]
+
+[1] assignment_1  [D]
+[2] assignment_2  [D]	=>> [pop-up]
+[3] assignment_3  [D]	=>> [HTML element counter]
+[4] assignment_4  [D]	=>> [HTML element counter] and [location object]
+[5] assignment_5  [D]
+
+
+
+
+=>> assignments [111:114]  [BOM]
+
+[1] assignment_1  [D] 	=>> [localStorage] with [select element]
+[2] assignment_2  [D]	=>> [sessionStorage] with [select element] & [inputs]
+
+
+
+
+=>> assignments [115:122] [destructuring]
+
+[1] assignment_1 [D]
+[2] assignment_2 [D]
+[3] assignment_3 [D]
+[4] assignment_4 [D]
+[5] assignment_5 [D]	=>> hard challenge
+[6] assignment_6 [D]	=>> = lesson [122]: destructuring challenge: [mixed-content]
+
+
+
+
+=>> assignments [123:133] [Set vs Map]
+
+[1] assignment_1 [D]
+[2] assignment_2 [D]	=>> 3 ways to get array from [Set] 	=>> then sort elements
+[3] assignment_3 [D]	=>> 3 ways to iterate specific object
+[4] assignment_4 [D]	=>> [100020003000] to [123] in one line
+[5] assignment_5 [D]	=>> 5 ways to get array from string
+[6] assignment_6 [D]	=>> special idea  =>> i made by two ways  =>> dealing with arrays
+[7] assignment_7 [D]
+[8] assignment_8 [D]
+
+
+
+
+=>> assignments [134:146]
+
+[1] assignment_1 []
+[2] assignment_2 []
+[3] assignment_3 []
+[4] assignment_4 []
+[5] assignment_5 []
+
+
+
+
+=>> assignments [147:158]
+
+[1] assignment_1 []
+[2] assignment_2 []
+[3] assignment_3 []
+[4] assignment_4 []
+[5] assignment_5 []
+
+
+
+
+=>> assignment [159:168]
+
+[1] assignment_1 []
+[2] assignment_2 []
+[3] assignment_3 []
+[4] assignment_4 []
+[5] assignment_5 []
+[6] assignment_6 []
+[7] assignment_7 []
+[8] assignment_8 []
+
+
+
+
+=>> assignments [169:178] []
+
+[1] assignment_1 [D]
+[2] assignment_2 [D]
+[3] assignment_3 [D]
+[4] assignment_4 [D]
+
+
+
+
+=>> assignment [179:188]
+
+[1] assignment_1 [D]
+[2] assignment_2 [D]
+
+
+
+

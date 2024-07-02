@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #EEE;
+    border-radius: 5px;
+}
+
+ul{
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #DDD;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li{
+    width: 60px;
+    height: 60px;
+    opacity: .4;
+    list-style-type: none;
+    cursor: pointer;
+    transition: 1s;
+}
+
+ul li:hover{
+    opacity: 1;
+}
+
+.active{
+    opacity: 1;
+}
+
+
+ul li:first-child{
+    background-color: red;
+}
+
+ul li:nth-child(2){
+    background-color: green;
+}
+
+ul li:nth-child(3){
+    background-color: blue;
+}
+
+ul li:nth-child(4){
+    background-color: black;
+}
+
+
+/*==== [reflected-color] ====*/
+.reflected-color{
+    width: 600px;
+    height: 300px;
+    margin: 20px auto;
+    background-color: red;
+}
+/*==== [reflected-color] end ====*/
+

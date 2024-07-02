@@ -1,0 +1,33 @@
+
+
+div select#favFont option[data-fontFamily="open"]{  /* [open]  =>> sensitive to upper and lower cases */
+    font-family: 'Open Sans', sans-serif;
+}
+
+div select#favFont option[data-fontFamily="cairo"]{ /* [cairo]  =>> sensitive to upper and lower cases */
+    font-family: 'Cairo', sans-serif;
+}
+
+div select#favFont option[data-fontFamily="roboto"]{/* [roboto]  =>> sensitive to upper and lower cases */
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+div{
+    width: 800px;
+    height: 200px;
+    margin: 100px auto;
+    background: #eee;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+div select{
+    width: 200px;
+    height: 30px;
+
+    font-size: 20px;
+}

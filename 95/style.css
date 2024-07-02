@@ -1,0 +1,14 @@
+*{
+    font-size: 20px;
+}
+
+div{
+    width: 200px;                       /* without [width]  =>> [margin: auto;] doesn't work */
+    margin: 50px auto;
+    padding: 20px;
+    color: brown;
+    background: bisque;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}

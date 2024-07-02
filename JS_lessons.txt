@@ -1,0 +1,303 @@
+problem solving websites 	=>> [edabet] [codewors] for beginners =>> [leetcode] for professionals
+				=>> [hackerrank] [codeforces]
+
+1- overview
+2- overview
+3- extensions in VS code
+4- JS developer tools
+5- calling JS code
+6- JS comments
+7- output to screen
+8- console methods
+9- ES6
+10- dataTypes
+11- declaring variables
+12- variable name
+13- [let] [const]
+14- escape character + line continue
+15- concatenation
+16- template literals = template string for concatenate [``]
+
+17- assignment = exercise
+
+
+
+
+18- arithmetic operator
+19- [unary plus operator] + [unary negation operator]
+20- type casting = type coercion
+21- assignment operator [= , += , -= , *= , /= , %=]
+
+22- assignment = exercise
+
+
+
+
+23- number
+24- number methods
+25- Math object
+
+26- assignment = exercise
+
+
+
+
+27- string methods
+28- string methods
+29- string methods	=>> v.bad lesson =>> it took me about a day and half to study and understand
+
+30- string challenge
+
+
+
+
+31- comparison operators
+32- logical operators
+33- if conditions
+34- nested if		=>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> there are some statements to test
+35- conditional ternary operator = if المختصره
+36- logical & Nullish coalescing operator
+
+37- assignment = exercise
+
+38- switch statement
+
+39- switch and if condition challenge
+
+
+
+
+40- array =>> big introduction
+41- array: [length] attribute
+42- add and remove from array [unshift] [push] =>> [shift] [pop]
+43- searching array [indexOf] [lastIndexOf] [includes]
+44- sorting arrays
+45- slicing array
+46- joining arrays
+
+47- array challenge
+
+
+
+48- for loop
+49- for loop on sequences =>> with condition if statement
+50- nested for loop
+51- loop control [break , continue , label]
+52- loop =>> advanced example
+
+53- practice of adding products using [for] loop
+
+54- while loop
+55- do while loop
+
+56- loop challenge
+
+
+
+
+57- function intro
+58- function =>> advanced example
+59- function return & use cases
+60- function default parameter
+61- function rest parameter
+62- function  =>> ultimate practice  =>> advanced practice
+
+63- function =>> random arguments challenge
+
+
+
+64- anonymous function
+65- return nested
+66- arrow function =>> syntax
+
+67- global scope vs local scope
+68- block scope
+69- scope lexical (static)
+
+70- arrow function challenge
+
+
+
+
+71- higher order function =>> map			=>> [1] modify values
+72- higher order function =>> map practice
+73- higher order function =>> filter			=>> [2] filter values  =>> remove from array
+74- higher order function =>> filter practice
+75- higher order function =>> reduce			=>> [3] 
+76- higher order function =>> reduce practice
+77- higher order function =>> forEach & practice	=>> [4] loop values
+
+78- higher order function challenge
+
+
+
+
+79- object
+80- [Dot Notation] vs [Bracket Notation]
+81- Nested object
+82- [new] keyword, [Object] constructor  =>> to create object  =>> add methods and properties
+83- [this] keyword  =>> refers to parent
+84- Object.create({})  =>> to create object
+85- create object with assign method
+
+
+
+
+86- DOM
+87- SET/GET [elements content & attributes]
+88- check attributes & examples				=>> compare to [lesson 96]
+89- DOM [create elements] & [append methods]
+90- DOM [create elements]  =>> product practice
+
+91- DOM [children]
+92- DOM [events]
+93- DOM [validate form] & [event.preventDefault();]
+
+94- DOM [Event simulation]
+95- DOM [classList] object and it's methods		=>> used alot in practical exercises
+
+96- DOM [CSS styling] & stylesheets			=>> compare to [lesson 87]
+97- DOM [deal with elements]	=>> [before, after] [append, prepend] [remove()]  =>> Element
+98- DOM [traversing]		[nextSibling, nextElementSibling, previousibling, previousElementSibling]
+99- DOM [clonNode(Deep)]
+100- DOM [addEventListener()]
+
+101- DOM challenge
+
+
+
+
+
+102- BOM [what is BOM]
+103- BOM [alert(msg)] [confirm(msg)] [prompt(msg, default msg)]
+104- BOM [setTimeout()] [clearTimeout()]
+105- BOM [setInterval()] [clearInterval()]
+
+106- BOM [window.location] object
+107- BOM [window.open()] & [window.close()]
+108- BOM [window] =>> [history] object
+109- BOM [scroll(), scrollTo(), scrollBy()]  [stop(), focus(), print()]
+110- BOM [scroll-to-top] practice  =>> using [scrollX, scrollY]
+
+111- BOM [localStorage] object
+112- BOM [localStorage] color-application-exercise  =>> vvv.important
+113- BOM [sessionStorage]
+
+114- BOM [challenge]
+
+
+
+
+=>> destructuring =>> [array], [object], [map]
+
+115- destructuring arrays
+116- destructuring arrays  =>> advanced example
+117- destructuring arrays  =>> swap variables
+
+118- destructuring object [1]
+119- destructuring object [2]
+
+120- destructuring function
+121- destructuring: [mixed-content] training
+
+122- destructuring challenge: [mixed-content] [D]
+
+
+
+
+123- Set() =>> to set data type
+124- [Set();] vs [WeekSet();]		mySet.forEach();	mySet.keys();
+125- [object();] vs [Map();]
+126- [Map();]	=>> like [Set] data type
+127- [Map] vs [WeakMap]
+
+128- [Array.from()]			=>> array from iterable
+129- [array1.copyWithin()]
+130- [array1.some()]
+131- [array1.every();]
+132- spread operator
+
+133- Map & Set challenge [D]
+
+
+
+
+134- intro and what is [regular expression]
+135- regular expressions  	=>> /pattern/modifiers
+136- regular expression   	=>> Ranges [part 1]
+137- regular expression   	=>> Rnages [part 2]
+138- regular expression   	=>> character classes [part 1]
+139- regular expression   	=>> character classes [part 2]
+
+140- regular expression		=>> quantifiers [part 1]
+141- regular expression		=>> quantifiers [part 2]
+142- regular expression		=>> quantifiers [part 3]
+
+143- regular expression		=>> [replace(), replaceAll()] with pattern
+144- regular expression		=>> form validation
+145- regular expression		=>> test regular expression and discussion
+146- regular expression		=>> challenge []
+
+
+
+
+147- OOP introduction
+148- OOP constructor function	=>> introduction
+149- OOP constructor function 	=>> new syntax  =>> [ES6]
+150- OOP   =>> deal with [properties and methods]
+151- OOP   =>> update properties and built-in constructors
+152- OOP   =>> class  =>> static methods and properties
+153- OOP   =>> class inheritance
+154- OOP   =>> class encapsulation
+155- OOP   =>> prototype introduction
+156- OOP   =>> prototype object
+157- OOP   =>> object meta data and descriptor  =>> part 1
+158- OOP   =>> object meta data and descriptor  =>> part 2
+
+
+
+
+
+159- date and time introduction
+160- get [date and time] methods
+161- set [date and time]
+162- formatting [date and time]
+163- tracking time operations
+
+164- generator fucntion introduction
+165- delegate generator function
+166- generate infinite numbers
+167- import and export modules
+168- [export named vs default] & [import all]
+
+
+169- what is JSON
+170- JSON syntax
+171- what is API
+172- [JSON.parse()] [JSON.stringify()]
+173- asynchronous vs synchronous programing
+174- [call stack] and web API
+175- [event loop], [callback queue]
+176- what is Ajax and network information
+177- Ajax  =>> request and response from real API
+178- Ajax  =>> loop on data
+
+
+179- [callback hell] or [pyramid of doom]
+180- promise intro and syntax
+181- promise: [then, catch, finally]	[continuous then] no return = error  =>> check on [not continuous]
+182- promise and XHR
+
+183- fetch API
+184- promise [all], [all settled], [race]
+185- [async] before function	=>> [comparing async] [185: return] [186: console.log(await);]	[180-182-185]
+186- [await] works only		=>> [comparing async] [185: return] [186: console.log(await);] 
+187- [try, catch, finally]  =>> fetch
+
+188- the end and advices
+
+
+[when revising typeScript]
+-150  =>> union operator = [||] [or]   &   intersection operator = [&&] [and]
+
+

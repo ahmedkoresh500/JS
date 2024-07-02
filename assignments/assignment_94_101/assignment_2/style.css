@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div.assign {
+    text-align: center;
+    padding-top: 20px;
+}
+
+div.assign input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ddd;
+}
+
+div.assign input:focus {
+    outline: none;
+    border-color: #ccc;
+}
+
+div.assign [title="Current"] {              /* [title="current"] div  =>> inside [assign] div */
+    width: 610px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #f1f0f0;
+}
+
+div.assign .classes-list {
+    width: 610px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #f1f0f0;
+}
+
+div.assign .classes-list h5 {
+    margin: 0 0 10px;
+    text-align: left;
+}
+
+div.assign .classes-list div span {
+    margin-right: 5px;
+    padding: 6px 10px 8px;
+    color: white;
+    background-color: #ff5722;
+    border-radius: 6px;
+    display: inline-flex;
+}

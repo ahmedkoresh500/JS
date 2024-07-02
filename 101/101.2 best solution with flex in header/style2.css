@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height: 100vh;
+}
+
+/* ===== header section ====== */
+/* ===== direct content ====== */
+header{
+    display: flex;
+}
+
+.logo{
+    width: 60%;
+}
+
+header ul{
+    width: 40%;
+    display: flex;
+}
+/* =====/ direct content /==== */
+
+
+/* ====== logo section ======= */
+.span0{
+    margin: 20px 0px 0px 60px;
+    color: #1fa765;
+    font-weight: bold;
+}
+/* ======/ logo section /===== */
+
+
+/* ======= ul section ======== */
+ul li{
+    /* background: #EEE; */
+    margin: 18px;
+    flex: 1;
+    list-style-type: none;
+    text-align: center;
+    opacity: .8;
+}
+/* =======/ ul section /======= */
+/* =====/ header section /===== */
+
+
+/* ===== content section ====== */
+.content{
+    background-color: #EEE;
+}
+.product{
+    width: 30%;
+    background: #FFF;
+    text-align: center;
+    margin: 10px 0px;
+    margin-left: 2.5%;      /* 4 spaces */
+    padding: 15px;
+    display: inline-block;
+}
+
+/* ======= span section ======= */
+.span1{
+    padding: 5px;
+    display: block;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.span2{
+    opacity: .6;
+}
+/* ======/ span section /======= */
+/* =====/ content section /===== */
+
+
+
+/* ====== footer section ======= */
+.footer{
+    background: #1fa765;
+    text-align: center;
+    padding: 14px;
+}
+/* =====/ footer section /====== */
+
+
+
+/*
+    * display: flex;    =>> result = all divs in one line    =>> the same like [float: left;]
+                        =>> [li]s take parent's full size    =>> cauz no [margin] or [padding]
+
+    * flex: 1;          =>> to cancel [float: left;]            =>> like [text-align: center]
+    * margin: 10px;     =>> to make the shape beautiful
+
+    * EX =>> header above
+*/

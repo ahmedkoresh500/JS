@@ -1,0 +1,27 @@
+div{
+    height: 3000px;
+    width: 3000px;
+    margin: 15px;
+    background-color: #d0d0d0;
+    border-radius: 5px;
+
+    transition: scroll 1s;
+    scroll-behavior: smooth;
+
+}
+
+button{
+    padding: 6px;
+    color: white;
+    background-color: red;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    display: none;      /* to hide HTML element */      
+}                       /* [visibility:hidden;] better than [display:none;]  =>> when making [pop-up] */

@@ -1,0 +1,15 @@
+p{
+    width: 200px;
+    margin: 50px auto;
+    padding: 15px;
+    color: brown;
+    background-color: #eee;
+
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+p:hover{
+    color: rgb(252, 59, 59);
+}

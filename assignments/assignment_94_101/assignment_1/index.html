@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title> asignment [1]: [94:101] [D] </title>
+    <link rel="stylesheet" href="" type="text/css">
+    <style></style>
+</head>
+
+<body>
+    <a class="open" href="https://google.com">Google</a>
+    <a class="open" href="https://elzero.org">Elzero</a>
+    <a class="not" href="https://facebook.com">Facebook</a>
+    <a class="linked" href="https://linkedin.com">Elzero</a>
+
+    <script>
+        // Your Code Here
+        let aElements = document.querySelectorAll("a");
+        aElements.forEach( (aTag) => {
+            if(aTag.classList.contains("open")  &&  aTag.innerHTML === "Elzero"){       // two are the same
+            // if(aTag.classList.item(0) === "open"  &&  aTag.innerHTML === "Elzero"){  // two are the same
+                // aTag.click();
+            }
+        } );
+    </script>
+
+</body>
+</html>

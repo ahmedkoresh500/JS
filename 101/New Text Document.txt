@@ -1,0 +1,3 @@
+101.1	=>>	header{float: right;}
+101.2	=>>	header{display: flex} product{display: inline-block}
+101.3	=>>	header{display: flex} product{display: flex}

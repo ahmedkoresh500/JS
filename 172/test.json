@@ -1,0 +1,11 @@
+{
+    "string": "Ahmed",
+    "number": 24,
+    "object": {
+        "1": "string",
+        "end": "the end"
+    },
+    "Array": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
+    "boolean": true,
+    "null": null
+}

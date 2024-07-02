@@ -1,0 +1,13 @@
+{
+    "string": "Ahmed",
+    "number": 24,
+
+    "object":{
+        "Egypt": "Cairo",
+        "KSA": "Riyadh"
+    },
+    "array": ["HTML", "CSS", "JS"],
+
+    "boolean": true,
+    "null": null
+}

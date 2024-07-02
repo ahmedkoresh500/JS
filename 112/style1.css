@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+}
+
+ul{
+    width: 400px;
+    margin: 20px auto;
+    padding: 10px;                      /* to center [display:flex; justify-content: space-between;] */
+    background-color: #d0d0d0;
+    line-height: 50px;
+    text-align: center;
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+ul li{
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    list-style: none;
+    cursor: pointer;
+    opacity: .4;
+
+    transition: 1s;
+}
+
+
+ul li:hover{
+    opacity: 1;
+}
+
+.active{
+    opacity: 1;
+}
+
+
+ul li:first-child{
+    background-color: red;
+}
+
+ul li:nth-child(2){
+    background-color: green;
+}
+
+ul li:nth-child(3){
+    background-color: blue;
+}
+
+ul li:nth-child(4){
+    background-color: black;
+}
+
+
+.reflected-color{
+    background-color: #887c7c;
+    width: 800px;
+    height: 400px;
+    margin: auto;
+}
+
