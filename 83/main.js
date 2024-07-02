@@ -1,24 +1,27 @@
 /*
     * [this] keyword    =>> refers to parent
 
-    * Global Scope = Global context     =>> [window] object
+    * [window] object  =>> Global Scope = Global context
     * function scope = function context
 
     * search on google:
         =>> [strict mode]
 */
 
-console.log( this );            // [this] keyword  =>> refers to parent
+console.log(this);              // [this] keyword  =>> refers to parent
+console.log(window);
 console.log( this === window ); // result = true
 
-MyVar = 100;
+myVar = 100;
 
-console.log( window.MyVar );    // [MyVar] =>> property inside [window] object
-console.log( this.MyVar );      // [MyVar] =>> property inside [window] object
+// 3 are the same
+console.log(myVar);             // [myVar] =>> property inside [window] object
+console.log( window.myVar );    // [myVar] =>> property inside [window] object
+console.log( this.myVar );      // [myVar] =>> property inside [window] object
 
-console.log( "\n" );
+console.log("\n");
 
-// let MyVar = 200;             // syntax error =>> can't access [MyVar] before identification [initialization]
+// let myVar = 200;             // syntax error =>> can't access [myVar] before identification [initialization]
                                 // line [16] [17] won't be printed
 
 function SayHello(){
@@ -32,7 +35,7 @@ console.log( SayHello() === window );
 document.getElementById("cl").onclick = function(){     // anonymous function =>> function without FunctionName
     console.log( this );        // [this] keyword  =>> refers to parent  = html input
 }
-console.log( "\n" );
+console.log("\n");
 
 
 let User = {
@@ -45,4 +48,4 @@ let User = {
 };
 
 console.log( User.Age );
-console.log( User.AgeInDays() + " Days" );      // must call methods with parentheses
+console.log( User.AgeInDays() + " Days" );      // functions  =>> must call with parentheses
