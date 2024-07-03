@@ -1,5 +1,5 @@
 /*
-    * OOP: update properties and built-in constructors:
+    * OOP: [update properties] and [built-in constructors]:
 
 */
 

@@ -18,32 +18,38 @@ let Obj2 = {
     prop2: 2,
     meth2: function(){
         return this.prop2;
-    },
-};
+    },                              // colon
+};                                  // semicolon
 
-let TargetObj3 = {
+let Obj3 = {
     prop1: 100,
     prop3: 3,
 };
 
-// [Object.assign({})] accept target object to assign to it =>> from one or more
-// last object written  =>> it will take it's values
-let FinalObject = Object.assign(TargetObj3, Obj1, Obj2);
+/*
+    * [Object.assign({})]:
+        [1] accept one or more [object]
+        [2] newest value in last object written
+        [3] first object called [target object]
+*/
+let FinalObject = Object.assign(Obj3, Obj1, Obj2);
 
-// [1] [prop1 = 100]    =>> [TargetObj3]
+// [1] [prop1 = 100]    =>> [Obj3]
 // [2] [prop1 = 1]      =>> [Obj1]
-// so [prop1 = 1]       =>> last object written  =>> it will take it's values
+// so [prop1 = 1]       =>> newest value in last object written
+
 // EX [1]:
 console.log(FinalObject);
 
+console.log("\n");
 
 // EX [2]:
 FinalObject.prop1 = 200;            // re-assigning value
 FinalObject.prop4 = 5;              // add new properties
-console.log( FinalObject );
+console.log(FinalObject);
+
 console.log("\n");
 
-// EX [3]:
-// if i don't have [target object]  =>> [target object] is empty = [{}]
-let NewObject = Object.assign({}, Obj1, {prop5: 5, prop6: 6} ); // adding new properties [prop5: 5]
+// EX [3]: first object called [target object]  =>> can be empty [{}]
+let NewObject = Object.assign({}, Obj1, {prop5: 5, prop6: 6} ); // add new properties [prop5: 5]
 console.log(NewObject);

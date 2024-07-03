@@ -1,6 +1,8 @@
 problem solving websites 	=>> [edabet] [codewors] for beginners =>> [leetcode] for professionals
 				=>> [hackerrank] [codeforces]
 
+=>> disable annoying source code modigfication	=>> disable extension [gitlens]
+
 1- overview
 2- overview
 3- extensions in VS code
@@ -244,8 +246,8 @@ problem solving websites 	=>> [edabet] [codewors] for beginners =>> [leetcode] f
 147- OOP introduction
 148- OOP constructor function	=>> introduction
 149- OOP constructor function 	=>> new syntax  =>> [ES6]
-150- OOP   =>> deal with [properties and methods]
-151- OOP   =>> update properties and built-in constructors
+150- OOP   =>> deal with [properties and methods]  =>> [union operator ||] [intersection operator &&]
+151- OOP   =>> [update properties] and [built-in constructors]
 152- OOP   =>> class  =>> static methods and properties
 153- OOP   =>> class inheritance
 154- OOP   =>> class encapsulation
@@ -298,6 +300,6 @@ problem solving websites 	=>> [edabet] [codewors] for beginners =>> [leetcode] f
 
 
 [when revising typeScript]
--150  =>> union operator = [||] [or]   &   intersection operator = [&&] [and]
+150- =>> union operator = [||] [or]   &   intersection operator = [&&] [and]
 
 

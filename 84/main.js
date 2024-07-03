@@ -10,8 +10,8 @@ let User = {
     Name: "Ahmed",
     Age: 25,
     DoubleAge: function(){          // anonymous function  =>> function without functionName
-        return User.Age * 2;        // 2 are the same   =>> [Age] = syntax error     =>> [User.Age]
-        return this.Age *2;         // 2 are the same   =>> [Age] = syntax error     =>> [this.Age]
+        return User.Age * 2;        // 2 are the same   =>> [Age] = syntax error  =>> [User.Age]
+        return this.Age *2;         // 2 are the same   =>> [Age] = syntax error  =>> [this.Age]  => [more accurate] down
     },
 };
 
