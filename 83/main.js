@@ -21,31 +21,30 @@ console.log( this.myVar );      // [myVar] =>> property inside [window] object
 
 console.log("\n");
 
-// let myVar = 200;             // syntax error =>> can't access [myVar] before identification [initialization]
-                                // line [16] [17] won't be printed
+// let myVar = 200;             // = syntax error =>> can't access [myVar] before identification [initialization]
+                                // line [18] [19] [20] won't be printed
 
-function SayHello(){
-    console.log( this );        // [this] keyword  =>> refers to parent  = [window] object
-    return this;                // [this] keyword  =>> refers to parent
+function sayHello(){
+    console.log(this);          // [this] keyword  =>> refers to parent = [window] object here
+    return this;                // [this] keyword  =>> refers to parent = [window] object here
 }
-console.log( SayHello() === window );
+console.log( sayHello() === window );   // [1] print [window] object    [2] print [true]
 
 
 // access button in [index.html]
-document.getElementById("cl").onclick = function(){     // anonymous function =>> function without FunctionName
-    console.log( this );        // [this] keyword  =>> refers to parent  = html input
+document.getElementById("cl").onclick = function(){ // anonymous function =>> function without FunctionName
+    console.log(this);                          // [this] keyword  =>> refers to parent = [html input] here
 }
 console.log("\n");
 
-
 let User = {
     Name: "Ahmed",
-    Age: 23,
+    Age: 25,
     AgeInDays: function(){
-        console.log( this );    // semicolon not colon
-        return this.Age * 365;  // [this] keyword  =>> refers to parent  =>> [User] object
+        console.log(this);      // semicolon not colon
+        return this.Age * 365;  // [this] keyword  =>> refers to parent  =>> [User] object here
     },                          //  [User.Age * 365] = [this.Age * 365]
 };
 
-console.log( User.Age );
+console.log(User.Age);
 console.log( User.AgeInDays() + " Days" );      // functions  =>> must call with parentheses

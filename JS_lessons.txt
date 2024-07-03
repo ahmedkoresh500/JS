@@ -137,8 +137,8 @@ problem solving websites 	=>> [edabet] [codewors] for beginners =>> [leetcode] f
 81- Nested object
 82- [new] keyword, [Object] constructor  =>> to create object  =>> add methods and properties
 83- [this] keyword  =>> refers to parent
-84- Object.create({})  =>> to create object
-85- create object with assign method
+84- create object: [create({})] method
+85- create object: [assign({})] method
 
 
 
