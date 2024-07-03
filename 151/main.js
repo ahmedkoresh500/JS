@@ -14,16 +14,16 @@ class User {
     };
 };
 
-let userOne = new User(33, "Ahmed", 6000);
+let userOne = new User(25, "Ahmed", 8000);
 console.log(userOne.u);
 
-// [1] update properties and built-in constructors
+// [1] [update properties] and [built-in constructors]
 userOne.updateName("Koresh");
 console.log(userOne.u);
 console.log(`${"#".repeat(30)}\n\n`);
 
 
-// [2] update properties and built-in constructors
+// [2] [update properties] and [built-in constructors]
 let string1 = "Elzero";
 let string2 = new String("Elzero");
 console.log(typeof string1);                    // result = string
@@ -38,7 +38,6 @@ console.log(string1.constructor === String);    // result = true    =>> built us
 console.log(string2.constructor === String);    // result = true    =>> built using string constructor
 console.log(`${"#".repeat(30)}\n\n`);
 
-console.log(string1.constructor);               // result = native code     =>> three are the same
-console.log(string2.constructor);               // result = native code     =>> three are the same
-console.log(String);                            // result = native code     =>> three are the same
-
+console.log(string1.constructor);               // result = native code     =>> 3 are the same
+console.log(string2.constructor);               // result = native code     =>> 3 are the same
+console.log(String);                            // result = native code     =>> 3 are the same
