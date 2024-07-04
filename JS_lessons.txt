@@ -251,13 +251,11 @@ problem solving websites 	=>> [edabet] [codewors] for beginners =>> [leetcode] f
 152- OOP   =>> class  =>> static methods and properties
 153- OOP   =>> class inheritance
 154- OOP   =>> class encapsulation
+
 155- OOP   =>> prototype introduction
 156- OOP   =>> prototype object
 157- OOP   =>> object meta data and descriptor  =>> part 1
 158- OOP   =>> object meta data and descriptor  =>> part 2
-
-
-
 
 
 159- date and time introduction

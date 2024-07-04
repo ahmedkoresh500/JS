@@ -2,7 +2,6 @@
     * OOP: class inheritance:
 */
 
-
 /*
 // [constructor function] like [ordinal function]
 
@@ -17,15 +16,15 @@ function User(id, userName, email){         // first letter uppercase   =>> best
 class User {
     constructor(id, userName, email){
         this.i = id;
-        this.u = userName;  // [this] refers to object i created from this function [constructor function] [user class]
-        this.e = email;     // [this] refers to object i created from this function [constructor function] [user class]
+        this.u = userName;  // [this] refers to object i create from [this function] [constructor function] [user class]
+        this.e = email;     // [this] refers to object i create from [this function] [constructor function] [user class]
     };
     sayHello(){                     // no function keyword
-        return `Hello [${this.u}]`; // [Lesson 150] =>> outside constructor inside class =>> the only way
-    };                              // [this] refers to object i created from this function [constructor function] [User class]
+        return `Hello [${this.u}]`; // [Lesson 150] =>> [outside constructor] [inside class] =>> [the only way]
+    };                              // [this] refers to object i create from [this function] [constructor function] [User class]
 };
 
-let user1 = new User(100, "Koresh", 6000);
+let user1 = new User(25, "Ahmed Koresh", 6000);
 console.log( user1.sayHello() );
 console.log(`${"#".repeat(20)}\n\n`);
 
@@ -39,22 +38,25 @@ class Admin extends User {
     };
 };
 
-let admin1 = new Admin(77, "Elzero");
+// [admin1]:
+let admin1 = new Admin(25, "Elzero");
 console.log(admin1.id);                     // result = undefined
 console.log(admin1.userName);               // result = undefined
 
 console.log(admin1.i);                      // [i] not [id]
 console.log(admin1.u);                      // [u] not userName
 
-console.log(admin1.e);                      // result = undefined
-console.log(admin1.email);                  // result = undefined
+console.log(admin1.e);                      // result = undefined   =>> not inherited
+console.log(admin1.email);                  // result = undefined   =>> not inherited
 
 console.log(admin1.p);                      // result = undefined
 console.log(`${"#".repeat(20)}\n\n`);
 
-let admin2 = new Admin(88, "Osama", 1);
+// [admin2]:
+let admin2 = new Admin(26, "Ahmed", 1);
 console.log(admin2.i);
 console.log(admin2.u);
+console.log(admin2.e);
 console.log(admin2.p);
 console.log( admin2.sayHello() );           // [2] [methods]  =>> mustn't be written to be inherited
 console.log(`${"#".repeat(20)}\n\n`);
@@ -68,15 +70,13 @@ class SuperAdmin extends Admin {                        // [properties] must be 
     };
 };
 
-let superadmin1 = new SuperAdmin(22, "Ahmed", true, "Good");
-console.log(superadmin1.i);
-console.log(superadmin1.u);
-console.log(superadmin1.p);
-console.log(superadmin1.a);
-console.log(superadmin1.sayHello());        // [2] [methods]  =>> mustn't be written to be inherited
+let superAdmin1 = new SuperAdmin(27, "Ahmed", true, "Good");
+console.log(superAdmin1.i);
+console.log(superAdmin1.u);
+console.log(superAdmin1.p);
+console.log(superAdmin1.a);
+console.log(superAdmin1.sayHello());        // [2] [methods]  =>> mustn't be written to be inherited
 
 /*
-    * can't inherit [email] property in [SuperAdmin] from [User] directly  ???????????
+    * can't inherit [email] property in [SuperAdmin] =>> not inherited in [Admin]
 */
-
-

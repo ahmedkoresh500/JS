@@ -19,34 +19,36 @@ class User {
         this.i = id;
         this.u = userName;
         this.s = salary;
-        // this.n = number1;                    // = syntax error
-        this.n = this.number1;                  // [1] [this] refers to [object] i created from this function [constructor function] [User class]
-        this.th = this;                         // [this] refers to [object] i created from this function [constructor function] [User class]
-        // this.count++;                        // [this] refers to object  =>> doesn't work
+
+        // this.n = number1;        // result = syntax error
+        this.n1 = this.number1;     // [***] [this] refers to [object] i create from [this function] [constructor function] [User class]
+        
+        this.th = this;             // [***] [this] refers to [object] i create from [this function] [constructor function] [User class]
+        
+        // this.count++;            // [this] refers to object  =>> doesn't work
         User.count++;
     };
 
     // [2] static methods
     static countMembers(){                          // no [function] keyword
-        // return this;                             // [2] [this] refers to parent  =>> [User class]
+        console.log(this);                          // [***] [this] refers to parent  =>> [User class]
         // return `${User.count} members created`;  // [count] without [static] = dynamic =>> [result = undefined] when calling
         return `${this.count} members created`;     // [count] without [static] = dynamic =>> [result = undefined] when calling
     };
 };
 
-let user1 = new User(100, "Koresh", 5000);
-let user2 = new User(101, "Elzero", 6000);
+let user1 = new User(25, "Koresh", 5000);
+let user2 = new User(26, "Elzero", 6000);
 
 console.log(user1.u);
 console.log(user2.u);
 
-console.log(user1.n);
-console.log(user2.n);
+console.log(user1.n1);
+console.log(user2.n1);
 
 console.log(user1.th);
 console.log(user2.th);
 console.log(`${"#".repeat(30)}\n\n`);
-
 
 
 // number1  =>> [dynamic]
@@ -60,12 +62,9 @@ console.log(User.number2);    // result = 20            =>> static  =>> [class] 
 console.log(`${"#".repeat(30)}\n\n`);
 
 
-
 // console.log( user1.countMembers() );         // result = syntax error
 console.log( User.countMembers() );
 console.log(`${"#".repeat(30)}\n\n`);
-
-
 
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -80,7 +79,7 @@ class User5 {
         User5.count++;
     };
     static members(){
-        return `${this.count} members created`;     // [this] refers to parent  =>> [User5 class]
+        return `${this.count} members created`;     // [***] [this] refers to parent  =>> [User5 class]
         return `${User5.count} members created`;
     };
 };
@@ -92,4 +91,3 @@ let user15 = new User5(100, "Ahmed", 2000);
 
 console.log( User5.members() );
 */
-

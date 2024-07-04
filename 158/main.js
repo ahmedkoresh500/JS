@@ -5,7 +5,7 @@
 
     * [writable], [enumerable], [configurable] not written   = false    =>> by default
 
-    * Object.defineProperties(objectName, {newOrOldObjectProperties});
+    * Object.defineProperties(objectName, {oldOrNewPropertiesName});
 */
 
 
@@ -25,7 +25,6 @@ Object.defineProperties(object1, {
         value: 25,
     },                          // colon only
 });
-
 
 
 // revision
@@ -66,5 +65,3 @@ console.log( Object.getOwnPropertyDescriptors(object1).a.writable );        // e
 console.log( Object.getOwnPropertyDescriptors(object1).a.enumerable );      // extra [s]
 console.log( Object.getOwnPropertyDescriptors(object1).a.configurable );    // extra [s]
 console.log( Object.getOwnPropertyDescriptors(object1).a.value );           // extra [s]
-
-
