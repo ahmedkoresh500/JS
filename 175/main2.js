@@ -50,4 +50,3 @@ setTimeout( function(){     // [anonymous function], [arrow function]
 
 let var1 = 50;
 var1 += 50;
-

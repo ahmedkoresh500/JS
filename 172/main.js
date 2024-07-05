@@ -20,7 +20,7 @@ console.log(typeof JSobject);               // result = JS object
 console.log(JSobject);
 console.log(`${"#".repeat(30)}\n\n`);
 
-JSobject["userName"] = "Ahmed";             // bracket notation
+JSobject["userName"] = "Ahmed Koresh";      // bracket notation
 JSobject["Age"] = 24;                       // bracket notation
 
 let JSONobjectToServer = JSON.stringify(JSobject);

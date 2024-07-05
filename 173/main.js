@@ -3,7 +3,7 @@
         =>> to understand [Ajax], [fetch], [promises]
 
     [1] synchronous programing:
-        * operations in sequence
+        * operations in sequence [squentially]
         * next operation after completion of previous operation
         * EX  =>> الطوابير في المترو
 
@@ -12,23 +12,19 @@
         * next and previous operation start simultaneously
         * EX  =>> الطرابيزات في المطعم
 
-
     * Facebook simulation as example:
 
-    * synchronous   =>>  متزامن
-    * asynchronous  =>>  غير متزامن
+    * فرق بين [تزامن] و [متزامن]
+    * synchronous   =>>  تزامن, في زمن بين الشئ والتاني, كل حاجه واخده زمنها, شئ بعدب شئ
+    * asynchronous  =>>  متزامن, مفيش تزامن, كلو مع بعضو
 
-    * [synchronous] before [asynchronous]
+    * [synchronous] before [asynchronous]   =>> in execution
 
     * search on google:
         [1] JS  =>> synchronous     =>> single thread language      
         [2]                         =>> multi thread language
-*/
 
-/*
-    [1] document.write();       // synchronous
-    [2] window.alert();         // synchronous
-    [3] console.log();          // synchronous
+    * synchronous: [document.write()] [window.alert()] [console.log()]
 */
 
 /*
@@ -41,8 +37,9 @@ console.log("3");               // synchronous
 
 
 // EX [2]:
+document.write("hello world");
+window.alert("hello man");
 console.log("1");                                           // synchronous
 console.log("2");                                           // synchronous
 setTimeout( _ => console.log("operation [2]"), 1000 );      // [asynchronous]
 console.log("3");                                           // synchronous
-

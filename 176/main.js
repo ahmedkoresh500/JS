@@ -16,4 +16,3 @@
 let request1 = new XMLHttpRequest();
 console.log(typeof request1);       // result = object
 console.log(request1);              // result = [XMLHttpRequest] object
-

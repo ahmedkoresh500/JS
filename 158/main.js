@@ -3,7 +3,8 @@
         [1] define multiple properties
         [2] check descriptors [related objects or properties]
 
-    * [writable], [enumerable], [configurable] not written   = false    =>> by default
+    * [writable] [enumerable] [configurable]:
+            =>> not written = false    =>> by default  =>> [Object.defineProperties()]
 
     * Object.defineProperties(objectName, {oldOrNewPropertiesName});
 */
@@ -14,10 +15,12 @@ const object1 = {
     b: 20,
 };
 
+console.log(Object.getOwnPropertyDescriptor(object1, "b")); // [writable] [enumerable] [configurable] = true
+
 // [1] define multiple properties
 Object.defineProperties(object1, {
     c:{
-        configurable: true,
+        configurable: true,                     // [writable] [enumerable] not written = false [by default]
         value: 15,
     },
     d:{
@@ -25,6 +28,10 @@ Object.defineProperties(object1, {
         value: 25,
     },                          // colon only
 });
+
+console.log(Object.getOwnPropertyDescriptor(object1, "c"));
+console.log(`${"#".repeat(40)}\n\n`);
+
 
 
 // revision
@@ -41,7 +48,7 @@ Object.defineProperties(object2, {
 
 console.log(object1);
 console.log(object2);
-console.log(`${"#".repeat(30)}\n\n`);
+console.log(`${"#".repeat(40)}\n\n`);
 
 // [2] check descriptors [related objects or properties]
 // =>> [a] for one property

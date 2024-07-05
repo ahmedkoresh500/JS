@@ -3,7 +3,7 @@
         [1] data inside braces {curely brackets}
         [2] {key: value}  =>> like object
 
-        [3] key  =>> must be string wrapped in double quotes
+        [3] [key] must be string    =>> wrapped in double quotes
         [4] data separated by coma
 
         [5] curely brackets for objects {}
@@ -19,4 +19,3 @@
 
     * [JSON editor online] website
 */
-
