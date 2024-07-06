@@ -5,8 +5,8 @@
         [1] [cross origin API]
         [2] [API authentication]
 
-    * open with live server =>> to avoid [CORS policy] error
-                            =>> to avoid [rules] error
+    * open with live server =>> to avoid [CORS policy] errors
+                            =>> to avoid [rules] errors
 
     * onload
     * onreadystatechange    =>> [Ajax]      =>> [responseText]  = syntax error
