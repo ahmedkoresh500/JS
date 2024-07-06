@@ -6,17 +6,18 @@
                                             =>> multi thread language
         [2] call stack  =>> mechanism to make the interpreter track your calls
 
-        [3] when function executed  =>> it's popped out
-        [4] when calling asynchronous function  =>> it's sent to web API
-        -> [5] [setTimeout();]  =>> asynchronous function  =>> starts its own thread =>> although single thread
+        [3] when function executed  =>> it's popped out [it's timed out]
+        [4] when [asynchronous function] called:
+                                            [a] it's sent to [web API]
+                                            [b] starts its own thread =>> although single thread
 
-        [6] [web API] act as a second thread
-        [7] API finish waiting and send back the function for processing
-        [8] [web API] add callback to callback queue
+        [5] [web API] act as a second thread
+        [6] API finish waiting and send back the function for processing
+        [7] [web API] add callback to callback queue
 
-        [9] [event loop] wait for call stack to be empty
-        [10] [event loop] get callback from callback queue  =>> and add it to call stack  [LIFO]
-        -> [11] [callback queue] applies principle "FIFO"
+        [8] [event loop] wait for call stack to be empty
+        [9] [event loop] get callback from callback queue  =>> and add it to call stack    [LIFO]
+        -> [10] [callback queue] applying "FIFO" principle      =>> [callback function]
 
 
     * web API = browser API
