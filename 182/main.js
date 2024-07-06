@@ -6,7 +6,6 @@
 
     * [promise]                 =>> result = [promise] object
     * [Ajax] [XMLHttpRequest]   =>> result = [XMLHttpRequest] object
-                                =>> result = object
 
     * result = [promise] object    =>> in a [pending] state:
         [1] [Lesson 180] promise with attached [then] directly
@@ -47,8 +46,7 @@ getData("https://api.github.com/users/elzerowebschool/repos")
         resolvedValue.length = 10;
         return resolvedValue;               // [a] promise avoid [callback hell] or [pyramid of doom]
     }                                       // [b] [continuous then] no return = error
-)
-.then(
+).then(
     (resolvedValue) => {                        // [2] [arrow function]
         console.log(typeof resolvedValue);      // result = object
         console.log(resolvedValue);
@@ -58,8 +56,7 @@ getData("https://api.github.com/users/elzerowebschool/repos")
         console.log(resolvedValue[0].name);
         resolvedValue.forEach( (object) => document.write(`<p> ${object.name} </p>`) );
     }
-)
-.catch(
+).catch(
     function(rejected){                         // [anonymous function] [arrow function]
         console.log(rejected);
     }
@@ -111,4 +108,3 @@ let Hello = () => {
 
 Hello();
 */
-

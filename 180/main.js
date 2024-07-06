@@ -1,9 +1,9 @@
 /*
-    * promise intro and syntax:
+    * promise intro:
         [1] JS promise like a promise in real life
         [2] something that will happen in the future
         [3] use: avoid [callback hell] or [pyramid of doom]
-        [4] promise  =>> object that represents [asynchronous operation] and its resulting value
+        [4] object that represents [asynchronous operation]
 
     * promise status:
         [1] pending:    =>> initial state
@@ -11,21 +11,21 @@
         [3] rejected:
 
     * story:
-        [1] once a promise has been called, it's in a [pending] state
-        [2] promise eventually ends in a resolved state or a rejected state
+        [1] once a promise called  =>> in a [pending] state
+        [2] ends in [a resolved state] or [a rejected state]
         [3] calling callback function (passed to then and catch) upon finishing
 
-    * [then()] method:  =>> accepts 2 optional arguments [callback for success or failure]
+    * [then()] method:  =>> accepts [2 optional arguments] [callback for success or failure]
 
 
-    * [promise]                 =>> result = promise    =>> [anonymous function] [arrow function]
-    * [Ajax] [XMLHttpRequest]   =>> result = object     =>> [anonymous function]  [arrow function] = syntax error
+    * [promise]     =>> result = [promise] object         =>> [anonymous function] [arrow function]
+    * [Ajax]        =>> result = [XMLHttpRequest] object  =>> [anonymous function]  [arrow function] = syntax error
 */
 
 
 const promise1 = new Promise( function(resolvedFunc, rejectFunc){   // [anonymous function] [arrow function]
     let connect = true;                                             // callback function that initializes the promise
-    if(connect){                                                    // XHR  =>> onreadystatechange  =>> anonymous function
+    if(connect){                                                    // XHR  =>> onreadystatechange  =>> anonymous function only
         resolvedFunc("connection established [1]");
     }else{
         rejectFunc( Error("connection failed [1]") );     // Error constructor  =>> change result
@@ -40,16 +40,15 @@ const promise1 = new Promise( function(resolvedFunc, rejectFunc){   // [anonymou
     }
 );
 
-
 console.log(typeof promise1);       // result = object
 console.log(promise1);              // result = [promise] object    =>> in a [pending] state
 console.log(`${"#".repeat(30)}\n\n`);   // [synchronous] before [asynchronous]  =>> [then] last thing printed in console
 
 
-
-// [catch] = [rejected] function inside [then]      =>> cancel red error
-// console.log(`${rejectedValue}`);                 =>> data about error
-// console.log(`bad ${rejectedValue}`);             =>> no data about error
+// [1] Error constructor change result
+// [2] [catch] = [rejected] function inside [then]      =>> cancel red error
+// console.log(`${rejectedValue}`);                     =>> data about error
+// console.log(`bad ${rejectedValue}`);                 =>> no data about error
 
 //////////////////////////////////////////////////////////
 
@@ -77,7 +76,6 @@ promise2.then(
 );
 
 
-
 // revision
 
 let promise3 = new Promise( function(resolved, rejected){   // [anonymous function] [arrow function]
@@ -95,7 +93,7 @@ console.log(promise3);              // result = [promise] object  =>> in a [fulf
 setTimeout( function(){             // [anonymous function] [arrow function]
     console.log(typeof promise3);   // result = object
     console.log(promise3);          // result = [promise] object    =>> in a [fulfilled] state
-}, 1000 );
+}, 2000 );
 
 setTimeout( function(){
     promise3.then(
@@ -106,4 +104,4 @@ setTimeout( function(){
             console.log(`Bad ${rejected}`);
         }
     );
-},1000 );
+},2000 );

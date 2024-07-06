@@ -13,7 +13,7 @@ let promise1 = new Promise( (resolved, rejected) => {       // [anonymous functi
     if(employees.length === 4){
         resolved(employees);
     }else{
-        rejected( Error("number of employees is not 4") );      // Error constructor  =>> change result
+        rejected( Error("employees' number is not 4") );    // Error constructor  =>> change result
     };
 } );
 
@@ -26,15 +26,15 @@ promise1.then(
     function(resolvedValue){            // [1] [anonymous function]
         resolvedValue.length = 2;       // [Sayed], [Mahmoud]  =>> deleted
         console.log(resolvedValue);
-        return resolvedValue;           // [a] promise avoid [callback hell] or [pyramid of doom]
-    }                                   // [b] [continuous then] no return = error
+        return resolvedValue;           // [a] promise: avoid [callback hell] or [pyramid of doom]
+    }                                   // [b] [continuous then] no return = syntax error
 );
 
 promise1.then( 
     (resolvedVal) => {                  // [2] [arrow function]
         resolvedVal.length = 1;         // [Ahmed]  =>> deleted
-        return resolvedVal;             // [a] promise avoid [callback hell] or [pyramid of doom]
-    }                                   // [b] [continuous then] no return = error
+        return resolvedVal;             // [a] promise: avoid [callback hell] or [pyramid of doom]
+    }                                   // [b] [continuous then] no return = syntax error
 );
 
 promise1.then(
@@ -48,4 +48,3 @@ promise1.then(
 
 
 // revision
-
