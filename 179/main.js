@@ -5,7 +5,7 @@
     [1] what is callback:
         =>> function passed to another function to be executed later  [function inside setTimeout()]
 
-    * EX:
+    * [EX]:
         =>> function to handle photos
 
         [1] download photo from url

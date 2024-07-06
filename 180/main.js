@@ -1,8 +1,8 @@
 /*
     * promise intro and syntax:
-        [1] promise in JS like a promise in real life
-        [2] promise is something that will happen in the future
-        [3] promise avoid [callback hell] or [pyramid of doom]
+        [1] JS promise like a promise in real life
+        [2] something that will happen in the future
+        [3] use: avoid [callback hell] or [pyramid of doom]
         [4] promise  =>> object that represents [asynchronous operation] and its resulting value
 
     * promise status:
@@ -21,9 +21,6 @@
     * [promise]                 =>> result = promise    =>> [anonymous function] [arrow function]
     * [Ajax] [XMLHttpRequest]   =>> result = object     =>> [anonymous function]  [arrow function] = syntax error
 */
-
-
-
 
 
 const promise1 = new Promise( function(resolvedFunc, rejectFunc){   // [anonymous function] [arrow function]
@@ -66,11 +63,9 @@ let promise2 = new Promise( (resolvedFunc, rejectedFunc) => {   // [anonymous fu
     };
 } );
 
-
 console.log(typeof promise2);       // result = object
 console.log(promise2);              // result = [promise] object  =>> in a [rejected] state
 console.log(`${"#".repeat(30)}\n\n`);   // [synchronous] before [asynchronous]  =>> [then] last thing printed in console
-
 
 promise2.then(
     function (resolvedValue){                   // [1] anonymous function
@@ -80,8 +75,6 @@ promise2.then(
         console.log(`Bad ${rejectedValue}`);
     }
 );
-
-
 
 
 
@@ -114,6 +107,3 @@ setTimeout( function(){
         }
     );
 },1000 );
-
-
-

@@ -1,12 +1,12 @@
 p{
+    color: brown;
+    background-color: #eee;
     width: 200px;
     margin: 50px auto;
     padding: 15px;
-    color: brown;
-    background-color: #eee;
 
-    text-align: center;
     font-size: 24px;
+    text-align: center;
     cursor: pointer;
 }
 
