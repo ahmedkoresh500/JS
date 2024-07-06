@@ -32,7 +32,6 @@ p.addEventListener("click", function(event){
 */
 
 
-
 // EX [2]:
 function iamCallback(){
     console.log("i'm callback");
@@ -58,4 +57,3 @@ setTimeout( function(){
 
 
 // revision
-
