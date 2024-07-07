@@ -1,8 +1,6 @@
 /*
     * [then, catch, finally]    =>> with [promise] [fetch API].
-
     * [try, catch, finally]     =>> with [promise] [fetch API].
-
     * [await] with [async]      =>> with [try, catch, finally].
 */
 
@@ -39,9 +37,8 @@ async function readData2(){
 readData2();
 
 /*
-    * [finally] before [then] [catch].
-
-    * [finally] after [try] [catch].
+    [1] [finally] before [then] [catch].
+    [2] [finally] after [try] [catch].
 
     =>> [await] inside [try] only
 

@@ -26,7 +26,7 @@ async function readData1(){
         */
         console.log(promise1);          // result = [promise] object   =>> in a [pending] state
 
-        console.log(await promise1);    // [await] makes JS waits for promise result  //[1] two are the same
+        console.log(await promise1);                    //[1] two are the same
                                         // [await]  =>> convert promise [pending] -> [resolved]
 
         console.log(promise1);          // result = [promise] object   =>> in a [fulfilled] state

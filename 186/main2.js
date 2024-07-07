@@ -4,7 +4,7 @@
         [2] [await] makes JS waits for promise result       =>> implementing [then]  =>> asynchronous
         [3] [await]: elegant syntax for promise result
 
-    * [await] with [async]    =>> without [try, catch, finally]
+    * [async] and [await]    =>> without [try, catch, finally]
 */
 
 
