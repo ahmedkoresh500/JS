@@ -21,8 +21,9 @@ function getData1(){
 console.log(getData1());                // result = [promise] object    =>> in a [resolved] state
 let promise1 = getData1();
 console.log(promise1);                  // result = [promise] object    =>> in a [fulfilled] state
-console.log(`${"#".repeat(30)}\n\n`);   // result = [promise] object    =>> in a [pending] state  =>> [182] same case
-                                                                                                        // difference [XHR] [Ajax]
+console.log(`${"#".repeat(30)}\n\n`);   // result = [promise] object    =>> in a [pending] state  =>> lesson [182]
+                                        // difference: using [XHR] [Ajax]
+
 
 promise1.then(
     function(resolvedValue) {                   // [1] [anonymous function]
@@ -32,9 +33,6 @@ promise1.then(
         console.log(rejectedValue);
     }
 );
-
-
-
 
 
 
@@ -48,13 +46,11 @@ function getData2(){
     };
 };
 
-
-console.log(getData2());                // result = [promise] object    =>> in a [resolved] state
+console.log( getData2() );              // [1] result = [promise] object  =>> in a [resolved] state
 let promise2 = getData2();                      
-console.log(promise2);                  // result = [promise] object    =>> in a [fulfilled] state
-console.log(`${"#".repeat(30)}\n\n`);   // result = [promise] object    =>> in a [pending] state  =>> [182] same case
-                                                                                                        // difference [XHR] [Ajax]
-
+console.log(promise2);                  // [2] result = [promise] object  => in a [fulfilled] state
+console.log(`${"#".repeat(30)}\n\n`);   // result = [promise] object  => in a [pending] state  => lesson: [182]
+                                                                        // difference: using [XHR] [Ajax]
 promise2.then(
     function(resolvedValue){                // [1] [anonymous function]
         console.log(resolvedValue);
@@ -63,8 +59,6 @@ promise2.then(
         console.log(rejectedValue);
     }
 );
-
-
 
 
 // EX [3]:
@@ -79,14 +73,12 @@ async function getData3(){              // [async] before function  =>> function
     };
 };
 
-
                                         // [synchronous] before [asynchronous]
-console.log(getData3());                // result = [promise] object    =>> in a [resolved] state
+console.log( getData3() );              // [1] result = [promise] object    =>> in a [resolved] state
 let promise3 = getData3();
-console.log(promise3);                  // result = [promise] object    =>> in a [fulfilled] state
-console.log(`${"#".repeat(30)}\n\n`);   // result = [promise] object    =>> in a [pending] state  =>> [182] same case
-                                                                                                        // difference [XHR] [Ajax]
-
+console.log(promise3);                  // [2] result = [promise] object    =>> in a [fulfilled] state
+console.log(`${"#".repeat(30)}\n\n`);   // result = [promise] object  => in a [pending] state => [182]
+                                                                    // difference: using [XHR] [Ajax]
 promise3.then(
     function(resolvedValue){                // [1] [anonymous function]
         console.log(resolvedValue);
@@ -95,8 +87,6 @@ promise3.then(
         console.log(rejectedValue);
     }
 );
-
-
 
 
 /*
@@ -110,9 +100,9 @@ promise3.then(
 
     * compare: [180] [182] [185]    =>> result = promise        =>> in a [] state
 
-        [1] [180] result = [promise] object  =>> in a [pending] state    =>> promise with attached [then] directly
-        [2] [182] result = [promise] object  =>> in a [pending] state    =>> calling function return a promise [Ajax inside Promise]
-        [3] [185] result = [promise] object  =>> in a [resolved] state   =>> calling function return a [promise] only
+        [1] [180] result = [promise] object  =>> in a [pending] state    =>> promise with [then] directly
+        [2] [182] result = [promise] object  =>> in a [pending] state    =>> calling function return a promise [using Ajax inside Promise]
+        [3] [185] result = [promise] object  =>> in a [resolved] state   =>> calling function return a promise [not using Ajax inside Promise]
 
 
     [1] [180]:
@@ -122,10 +112,9 @@ promise3.then(
             if(connect){                                                    // XHR  =>> onreadystatechange  =>> anonymous function only
                 resolvedFunc("connection established [1]");
             }else{
-                rejectFunc(Error("connection failed [1]"));     // Error constructor  =>> change result
+                rejectFunc( Error("connection failed [1]") );   // Error constructor  =>> change result
             };
-        } )
-        .then(
+        } ).then(
             function(resolvedValue){                    // [1] [anonymous function]
                 console.log(`Good ${resolvedValue}`)
             },
@@ -148,10 +137,10 @@ promise3.then(
                 request1.open("GET", apiLink, true);
                 request1.send();
 
-                request1.onload = function(){           // anonymous function  =>> arrow function = [syntax error]
-                                                        // onload  =>> onreadystatechange = [syntax error]
+                request1.onload = function(){   // onload  =>> onreadystatechange = [syntax error]
+                                                // anonymous function  =>> arrow function = [syntax error]
                     if(this.readyState === 4 && this.status === 200){             // two are the same
-                    //if (request1.readyState === 4 && request1.status === 200){ // [S] of [State] must be uppercase
+                    //if (request1.readyState === 4 && request1.status === 200){  // [S] of [State] must be uppercase
                         resolved(JSON.parse(this.responseText));                  // [T] of [Text] must be uppercase
                     } else {
                         rejected(Error("no data is found"));            // Error constructor  =>> change result
@@ -187,9 +176,8 @@ promise3.then(
         console.log(getData1());                // result = [promise] object    =>> in a [resolved] state
         let promise1 = getData1();
         console.log(promise1);                  // result = [promise] object    =>> in a [fulfilled] state
-        console.log(`${"#".repeat(30)}\n\n`);   // result = [promise] object    =>> in a [pending] state  =>> [182] same case
-                                                                                                        // difference [XHR] [Ajax]
-
+        console.log(`${"#".repeat(30)}\n\n`);   // result = [promise] object  => in a [pending] state  => lesson: [182]
+                                                                            // difference: using [XHR] [Ajax]
         promise1.then(
             function(resolvedValue) {                   // [1] [anonymous function]
                 console.log(resolvedValue);
@@ -201,4 +189,3 @@ promise3.then(
 */
 
 // revision
-

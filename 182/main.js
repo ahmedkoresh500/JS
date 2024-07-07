@@ -8,7 +8,7 @@
     * [Ajax] [XMLHttpRequest]   =>> result = [XMLHttpRequest] object
 
     * result = [promise] object    =>> in a [pending] state:
-        [1] [Lesson 180] promise with attached [then] directly
+        [1] [Lesson 180] promise with [then] directly
         [2] [Lesson 182] calling function return a promise
         [3] [Lesson 183] fetch API
 */
@@ -21,8 +21,8 @@ function getData(apiLink) {
         request1.open("GET", apiLink, true);
         request1.send();
 
-        request1.onload = function(){           // anonymous function  =>> arrow function = [syntax error]
-                                                // onload  =>> onreadystatechange = [syntax error]
+        request1.onload = function(){           // onload  =>> onreadystatechange = [syntax error]
+                                                // anonymous function  =>> arrow function = [syntax error]
             if (request1.readyState === 4 && request1.status === 200){  // [S] of [State] must be uppercase
             // if(this.readyState === 4 && this.status === 200){        // two are the same
                 resolved(JSON.parse(this.responseText));                // [T] of [Text] must be uppercase

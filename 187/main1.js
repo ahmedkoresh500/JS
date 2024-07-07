@@ -1,8 +1,6 @@
 /*
     * [then, catch, finally]    =>> with [promise] [fetch API].
-
     * [try, catch, finally]     =>> with [promise] [fetch API]:
-
     * [await] with [async]      =>> with [try, catch, finally].
 
 */
@@ -18,7 +16,7 @@ const promise1 = new Promise( function(resolved, rejected){
 
 async function readData(){
     try{                                                // [await] inside [try] only
-        console.log(await promise1);                    // [***] [await] =>> convert promise [from pending] [to rejected]
+        console.log(await promise1);                    // [***] [await] =>> convert promise [pending] -> [trejected]
     }catch(rejected){                                   // rejected applied only 
             console.log(rejected);                      // data about error
     }finally{
@@ -32,19 +30,14 @@ readData();
 // console.log(rejectedValue);                      =>> data about error
 // console.log(`bad ${rejectedValue}`);             =>> no data about error
 
-
 /*
     * [finally] before [then] [catch].
-
     * [finally] after [try] [catch].
 
-
     =>> [await] inside [try] only:
-
 
     * promise status:
         [1] pending     =>> initial state
         [2] resolved    =>> fulfilled
         [3] rejected
 */
-

@@ -2,7 +2,7 @@
     * await:
         [1] [await] works only inside [async] function
         [2] [await] makes JS waits for promise result       =>> implementing [then]  =>> asynchronous
-        [3] [await] is elegant syntax for promise result
+        [3] [await]: elegant syntax for promise result
 
     * [await] with [async]    =>> without [try, catch, finally]
 */
@@ -29,7 +29,7 @@ async function readData2(){
         // console.log(await promise2);                                     // = syntax error
         console.log( await promise2.catch( (err) => err ) );                // callback function
         console.log( await promise2.catch( (err) => {return err;} ) );      // callback function
-                                    // [***] [await] =>> convert promise [from pending] [to rejected]
+                                    // [***] [await] =>> convert promise [pending] -> [rejected]
         
         await promise2.catch( (err) => console.log(err) );                  // callback function
         
@@ -37,8 +37,7 @@ async function readData2(){
 
 readData2();
 
-
+// Error constructor change result
 // [catch()] = [rejected] function inside [then]    =>> cancel red error
 // console.log(rejectedValue);                      =>> data about error
 // console.log(`bad ${rejectedValue}`);             =>> no data about error
-

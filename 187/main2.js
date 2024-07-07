@@ -29,8 +29,8 @@ async function readData2(){
         // console.log(await promise);              // [1] two are the same
 
         console.log(await http_Response.json());    // [1] two are the same
-    }catch(rejected){                               // [await] convert promise [from pending] [to resolved]
-            console.log(`rejected: ${rejected}`);   // [await] convert promise [from pending] [to rejected]
+    }catch(rejected){                               // [await] convert promise [pending] -> [resolved]
+            console.log(`rejected: ${rejected}`);   // [await] convert promise [pending] -> [rejected]
     }finally{
         console.log("[finally] after [try] [catch]");
     };
@@ -38,19 +38,15 @@ async function readData2(){
 
 readData2();
 
-
 /*
     * [finally] before [then] [catch].
 
     * [finally] after [try] [catch].
 
-
     =>> [await] inside [try] only
-
 
     * promise status:
         [1] pending     =>> initial state
         [2] resolved    =>> fulfilled
         [3] rejected
 */
-

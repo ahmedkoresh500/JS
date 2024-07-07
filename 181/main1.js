@@ -4,8 +4,9 @@
         [2] catch     =>> promise rejected    =>> catch the error
         [3] finally   =>> promise resolved or rejected, do something
 
-    * [finally] before [then] [catch]
     * [finally] synchronous
+    * [finally] before [then] [catch]
+    * [synchronous] before [asynchronous]
 */
 
 let promise1 = new Promise( (resolved, rejected) => {       // [anonymous function] [arrow function]

@@ -1,9 +1,11 @@
 /*
     * Promise. [all] [allSettled] [race]:
         [1] promise.all([array of promises]);
-            =>> all promises resolved   =>> return array of all promises        =>>>> resolved applied
-            =>> one promise rejected    =>> return rejected                     =>>>> rejected applied
-            =>> two promises rejected   =>> return rejected first  [1] in time  [2] equal in time [written first]   =>> rejected applied
+            =>> all promises resolved   =>> return array of all promises        =>> resolved applied
+            =>> one promise rejected    =>> return rejected                     =>> rejected applied
+            =>> two promises rejected   =>> return rejected first  [1] in time  [2] equal in time 
+                                                                                [written first] in [code page] not [promise]
+                                                                                =>> rejected applied
 
         [2] promise.allSettled([array of promises]);
             =>> all promises resolved   =>> return object of all promises  =>> resolved applied  =>> 3 cases  =>> object arranged by [written first]
@@ -11,61 +13,61 @@
             =>> two promises rejected   =>> return object of all promises  =>> resolved applied  =>> 3 cases  =>> object arranged by [written first]
 
         [3] Promise.race([array of promises]);
-            =>> all promises resolved   =>> return first promise only  [1] in time  [2] equal in time [rejected first] [written first]
-            =>> one promise rejected    =>> return first promise only  [1] in time  [2] equal in time [rejected first] [written first]
-            =>> two promises rejected   =>> return first promise only  [1] in time  [2] equal in time [rejected first] [written first]
-                                                                                                        [rejected applied]
+            =>> all promises resolved   =>> return first promise only  [1] in time  [2] equal in time  [written first] in [code page] not [promise]
+            =>> one promise rejected    =>> return first promise only  [1] in time  [2] equal in time  [written first] in [code page] not [promise]
+            =>> two promises rejected   =>> return first promise only  [1] in time  [2] equal in time  [written first] in [code page] not [promise]
+                                                        [in time] resolved or rejected
 */
 
 
 
 // EX [3]: [two promises rejected]
+let promise8 = new Promise( (resolved, rejected) => {
+    setTimeout( () => {
+        rejected( Error("the eighth promise") );                    // rejected applied only
+    }, 2000);
+} );
+
 let promise7 = new Promise( (resolved, rejected) => {
     setTimeout( () => {
         rejected( Error("the seventh promise") );                   // rejected applied only
-    }, 2000);                                           // [time = 2]
+    }, 2000);
 } );
 
-let promise8 = new Promise( (resolved, rejected) =>{
-    setTimeout( () => {
-        rejected( Error("the eighth promise") );                    // rejected applied only
-    }, 1000);                                           // [time = 1]
-} );
-
-let promise9 = new Promise( (resolved, rejected) =>{
+let promise9 = new Promise( (resolved, rejected) => {
     setTimeout( () => {
         resolved("the ninth promise");                              // resolved applied only
-    }, 3000);                                           // [time = 3]
+    }, 2000);
 } );
 
 
 
-// [Promise.all().then()];
+// [1] [Promise.all().then()];
 Promise.all([promise7, promise8, promise9])
 .then(
     (resolvedValues) => console.log(resolvedValues)                // wait [1 second] not [3 seconds]
     ,
     (rejectedValue) => {
-        console.log(`[all] rejected: ${rejectedValue}`);
+        console.log(`[all] [rejected]: ${rejectedValue}`);
         console.log(`${"#".repeat(10)}\n\n`);
     }
 );
 
-// [promise.allSettled().then()];
-Promise.allSettled([promise7, promise8, promise9])
-.then(
+// [2] [promise.allSettled().then()];
+Promise.allSettled([promise8, promise7, promise9])
+.then(                                          // wait [3 seconds]
     (resolvedValues) => {
-        console.log(resolvedValues);                // return object of all promises    =>>  resolved applied   =>> 3 cases  =>> object arranged by [written first]
-        console.log(resolvedValues[0].reason);      // return object of all promises    =>>  resolved applied   =>> 3 cases  =>> object arranged by [written first]
-        console.log(...resolvedValues);             // resolved = [.value]  =>> rejected = [.reason]
-        console.log(`${"#".repeat(50)}\n\n`);       // object is iterable
+        console.log(resolvedValues);            // return object of all promises    =>>  resolved applied   =>> 3 cases  =>> object arranged by [written first]
+        console.log(resolvedValues[0].reason);  // return object of all promises    =>>  resolved applied   =>> 3 cases  =>> object arranged by [written first]
+        console.log(...resolvedValues);         // [.value] -> resolved   [.reason] -> rejected
+        console.log(`${"#".repeat(50)}\n\n`);   // object is iterable
     },
     (rejectedValues) => console.log(rejectedValues)
 );
 
-// [Promise.race().then();]
+// [3] [Promise.race().then();]
 Promise.race([promise7, promise8, promise9])        // [race] before [all] [allSettled]
-.then(                                              // [1] min time  [2] equal in time [written first]
+.then(                                              // [1] in time  [2] equal in time [written first] in [codepage] not [promise]
     (resolved) => {
         console.log(`[race] resolved: ${resolved}`);
         console.log(`${"#".repeat(10)}\n\n`);
@@ -81,7 +83,7 @@ Promise.race([promise7, promise8, promise9])        // [race] before [all] [allS
     [1] [all] 
         =>> all promises resolved   =>> return array of all promises    =>> resolved applied
         =>> one promise rejected    =>> return rejected                 =>> rejected applied
-        =>> two promises rejected   =>> return rejected first  [1] in time  [2] equal in time  [written first]
+        =>> two promises rejected   =>> return rejected first  [1] in time  [2] equal in time [written first] in [codepage] not [promise]
 
     [2] [allSettled]
             =>> return object of all promises  =>> resolved applied  =>> 3 cases
@@ -90,9 +92,9 @@ Promise.race([promise7, promise8, promise9])        // [race] before [all] [allS
 
     [3] [race]
             =>> resolved or rejected        =>> doesn't matter
-            =>> return first promise only   =>> [1] in time     [2] equal in time [rejected first] [written first]
-                                                                                    [rejected applied]
+            =>> return first promise only   =>> [1] in time     [2] equal in time 
+                                                            => [written first] in [webpage] not [promise]
 
-    * [race] before [all] [allSettled]      =>> [1] min time    [2] equal in time [written first]
+    * [race] before [all] [allSettled]      =>> [1] in time    [2] equal in time 
+                                                            =>> [written first] in [codepage] not [promise]
 */
-

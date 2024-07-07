@@ -287,6 +287,10 @@ problem solving websites 	=>> [edabet] [codewors] for beginners =>> [leetcode] f
 180- promise intro and syntax
 181- promise: [then, catch, finally]	[continuous then] no return = error  =>> check on [not continuous]
 182- promise and XHR
+			[1] [Lesson 180] promise with [then] directly
+        		[2] [Lesson 182] calling function return a promise [using Ajax inside Promise] 
+										=> compare to lesson [185]
+        		[3] [Lesson 183] fetch API
 
 183- fetch API
 184- promise [all], [all settled], [race]
